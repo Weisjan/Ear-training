@@ -1,14 +1,14 @@
 # Ear Training
 
-Prosta aplikacja do treningu słuchu, która pomaga użytkownikowi ćwiczyć rozpoznawanie interwałów muzycznych. Aplikacja odtwarza dwa dźwięki jeden po drugim, a użytkownik musi zidentyfikować interwał między nimi.
+A simple application for ear training that helps users practice recognizing musical intervals. The app plays two notes one after the other, and the user must identify the interval between them.
 
-## Wymagania
+## Requirements
 
-* Python 3.10
-* Pygame 2.0.0
-* Tkinter
+* Python 3.10  
+* Pygame 2.0.0  
+* Tkinter (built-in with Python)
 
-## Struktura plików
+## File Structure
 
 ```
 Ear-training
@@ -22,48 +22,49 @@ Ear-training
 └── README.md
 ```
 
-| Nr | Plik/Katalog    | Opis |
-|----|-----------------|------|
-| 1  | `notes`        | Katalog zawierający pliki dźwiękowe nut (format mp3) |
-| 2  | `logic.py`      | Zawiera główną logikę aplikacji |
-| 3  | `gui.py`        | Implementacja graficznego interfejsu użytkownika (GUI) |
-| 4  | `README.md`     | Plik Readme |
+| No | File/Folder     | Description                                  |
+|----|------------------|----------------------------------------------|
+| 1  | `notes`          | Folder containing note audio files (mp3)     |
+| 2  | `logic.py`       | Contains the core application logic          |
+| 3  | `gui.py`         | Implements the graphical user interface      |
+| 4  | `README.md`      | This README file                             |
 
-## Instalacja
+## Installation
 
-1. Sklonuj repozytorium:
-   ```sh
+1. Clone the repository:
+   ```bash
    git clone https://github.com/Weisjan/Ear-training.git
    ```
-2. Uruchom `gui.py`
 
-## Opis działania
+2. Run `gui.py`
 
-1. **Generowanie pytania**: Aplikacja odtwarza dwa dźwięki jeden po drugim. Użytkownik musi zidentyfikować interwał muzyczny między tymi dźwiękami.
-2. **Zatwierdzenie odpowiedzi**: Użytkownik wybiera interwał z menu rozwijanego i zatwierdza swoją odpowiedź. Aplikacja sprawdza odpowiedź i aktualizuje wynik.
-3. **Ponowne odtworzenie interwału**: Jeśli użytkownik chce ponownie usłyszeć dźwięki, może kliknąć przycisk "Odtwórz ponownie", aby ponownie odtworzyć dźwięki.
-4. **Nowy interwał**: Użytkownik może w każdej chwili wygenerować nowy interwał, klikając przycisk "Nowy interwał".
+## How It Works
+
+1. **Generate a Question**: The app plays two notes in sequence. The user must identify the musical interval between them.
+2. **Submit Answer**: The user selects the interval from a dropdown menu and confirms the answer. The app checks it and updates the score.
+3. **Replay Interval**: The user can click the "Replay" button to hear the interval again.
+4. **New Interval**: The user can generate a new interval at any time by clicking the "New Interval" button.
 
 - **`logic.py`**:
-  - Zawiera funkcje do obsługi głównej logiki, w tym generowanie interwałów, odtwarzanie dźwięków i sprawdzanie odpowiedzi.
-  - Funkcje:
-    - `play_sound(filename)`: Odtwarza dany plik dźwiękowy.
-    - `generate_interval()`: Generuje nowy interwał.
-    - `replay_interval()`: Ponownie odtwarza bieżący interwał.
-    - `check_answer(user_interval, correct_interval)`: Sprawdza, czy odpowiedź użytkownika jest poprawna.
+  - Contains functions for the main logic, including interval generation, sound playback, and answer checking.
+  - Functions:
+    - `play_sound(filename)`: Plays a sound file.
+    - `generate_interval()`: Creates a new interval.
+    - `replay_interval()`: Replays the current interval.
+    - `check_answer(user_interval, correct_interval)`: Validates the user’s answer.
 
 - **`gui.py`**:
-  - Implementuje GUI przy użyciu Tkinter.
-  - Tworzy przyciski i menu rozwijane do interakcji z użytkownikiem.
-  - Funkcje:
-    - `new_interval()`: Generuje nowy interwał.
-    - `submit_answer()`: Zatwierdza odpowiedź użytkownika i aktualizuje wynik.
-    - `replay_interval()`: Ponownie odtwarza bieżący interwał.
+  - Implements the GUI using Tkinter.
+  - Creates buttons and dropdowns for user interaction.
+  - Functions:
+    - `new_interval()`: Generates a new interval.
+    - `submit_answer()`: Validates user input and updates the score.
+    - `replay_interval()`: Replays the current interval.
 
-## Uwagi
+## Notes
 
-- Możesz dostosować aplikację do swoich potrzeb, na przykład dodając więcej nut lub interwałów.
+- You can customize the app by adding more notes or interval types.
 
-## Autor
+## Author
 
 [Jan Weis](https://github.com/Weisjan)
